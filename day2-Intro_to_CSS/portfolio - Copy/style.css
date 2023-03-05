@@ -19,7 +19,7 @@ body{
 #intro .portfolio-pic{
     border-radius: 50px;
     margin-top: 10px;
-    width:40%;
+    width:20%;
     height:auto;
 }
 
@@ -43,4 +43,7 @@ table{
 }
 .container{
     margin: 10px;
+}
+#dynamic-text{
+    color: royalblue;
 }
