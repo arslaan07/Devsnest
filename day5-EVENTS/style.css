@@ -1,0 +1,17 @@
+.box {
+    background-color: coral;
+    width: 400px;
+    height: 400px;
+    padding: 16px;
+}
+.child {
+    background-color: royalblue;
+    width: 50%;  
+    height: 50%;
+    /* 50% wrt parent box */
+}
+#subchild {
+    width:50%;
+    height: 50%;
+    /* 50% wrt child box */
+}
