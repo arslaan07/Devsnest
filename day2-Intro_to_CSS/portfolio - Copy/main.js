@@ -43,3 +43,14 @@ function clearLetters(){
     }
 }
 printLetters(phrases[phraseIndex]);
+
+document.getElementById("email").addEventListener("input", function(event) {
+    const emailContent = event.target;
+    if(emailContent.validity.typeMismatch){
+        emailContent.setCustomValidity("Enter a valid email address");
+        emailContent.reportValidity();
+    }
+    else{
+        emailContent.setCustomValidity("");
+    }
+});
