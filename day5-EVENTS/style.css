@@ -1,5 +1,5 @@
 .box {
-    background-color: coral;
+    background: coral;
     width: 400px;
     height: 400px;
     padding: 16px;
@@ -14,4 +14,7 @@
     width:50%;
     height: 50%;
     /* 50% wrt child box */
+}
+input:invalid{
+    outline: 2px coral solid;
 }

@@ -1,54 +1,62 @@
-function handleMouseOver(event) {
-    console.log(event);
-}
-//event object contains info about the event 
-
-document.getElementById("start").addEventListener("click", function handleClick() {
-    document.addEventListener("mouseover", handleMouseOver);
-});
-document.getElementById("stop").addEventListener("click", function handleClick() {
-    document.removeEventListener("mouseover", handleMouseOver);
-});
-
-
-document.addEventListener("keypress", function(e){
-    console.log("keypress");
-    if(e.key==2){
-        e.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+    function handleMouseOver(event) {
+        console.log(event);
     }
-    console.log(e.key);
-} )
 
-document.addEventListener("keydown", function(e) {
-    console.log("keydown");
-    console.log(e);
+    // This DOMContentLoaded event is particularly useful for executing JavaScript 
+    // code that manipulates the DOM or interacts with elements on the 
+    // page, as it ensures that the necessary elements are available 
+    // before the code runs.
+
+
+    //event object contains info about the event 
+    
+    document.getElementById("start").addEventListener("click", function handleClick() {
+        document.addEventListener("mouseover", handleMouseOver);
+    });
+    document.getElementById("stop").addEventListener("click", function handleClick() {
+        document.removeEventListener("mouseover", handleMouseOver);
+    });
+    
+    
+    document.addEventListener("keypress", function(e){
+        console.log("keypress");
+        if(e.key==2){
+            e.preventDefault();
+        }
+        console.log(e.key);
+    } )
+    
+    document.addEventListener("keydown", function(e) {
+        console.log("keydown");
+        console.log(e);
+    })
+    
+    document.addEventListener("keyup", function(e) {
+        console.log("keyup");
+        console.log(e);
+    })
+    
+    document.querySelector(".parent").addEventListener("click", function() {
+        console.log("parent clicked");
+    })
+    
+    document.querySelector(".child").addEventListener("click", function() {
+        console.log("child clicked");
+    })
+    
+    document.getElementById("subchild").addEventListener("click", function(event) {
+        console.log("subchild clicked");
+        event.stopPropagation();
+    
+        // stopPropagation method prevents event bubbling to occur
+    })
+     
+    // Event capture
+    document.querySelector(".parent").addEventListener("click", function() {
+        console.log("parent clicked");
+    },true);
 })
-
-document.addEventListener("keyup", function(e) {
-    console.log("keyup");
-    console.log(e);
-})
-
-document.querySelector(".parent").addEventListener("click", function() {
-    console.log("parent clicked");
-})
-
-document.querySelector(".child").addEventListener("click", function() {
-    console.log("child clicked");
-})
-
-document.getElementById("subchild").addEventListener("click", function(event) {
-    console.log("subchild clicked");
-    event.stopPropagation();
-
-    // stopPropagation method prevents event bubbling to occur
-})
- 
-// Event capture
-document.querySelector(".parent").addEventListener("click", function() {
-    console.log("parent clicked");
-},true);
-
 // Event capture and event bubbling are two different mechanisms for handling events in JavaScript.
 
 // Event capture is the process of capturing an event at the top level of the DOM (Document Object Model) and then propagating it down to the target element.
