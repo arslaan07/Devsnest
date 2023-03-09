@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specifity and Semantic HTML</title>
+    <style>
+      p#id-level {
+        color: aquamarine
+      }  
+
+      /* id specifity=100
+      class sprecifity=10
+      element specifity=1
+      element + id specifity=101 */
+      .class-level {
+        color: coral;
+      }
+      #id-level {
+        color: palevioletred;
+      }
+      .box {
+        width: 400px;
+        height: 400px;
+        padding: 16px;
+        background-color: coral;
+      }
+      .child {
+        box-sizing: border-box ;
+        width: 100%;
+        background-color: royalblue;
+      }
+    </style>
+</head>
+<body>
+    <p style="color: royalblue" id="id-level" class="class-level">this is a para for testing specifity</p>
+</body>
+<div class="box">
+    <div class="box child">
+
+    </div>
+    <span>this is a a span </span>
+</div>
+</html>
