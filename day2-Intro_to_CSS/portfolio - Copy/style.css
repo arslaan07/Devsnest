@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
 }
@@ -22,8 +26,18 @@ body{
     width:20%;
     height:auto;
 }
-
-.container  >div  >h2{
+header{
+    padding: 16px;;
+}
+header nav > a{
+    margin: 16px;
+    text-decoration: none;
+}
+header nav > a:hover{
+    text-decoration: underline;
+    background-color: rgba(128, 128, 128, 0.167);
+}
+.container  >section  >h2{
     text-align: center;
 }
 
@@ -61,8 +75,16 @@ table{
     display: block;
     font-weight: 700;
 }
+#contact-me input:focus{
+    border: 3px blue solid;
+}
 #send {
     padding: 5px;
     border-radius: 5px;
     font-weight: 700;
+}
+footer {
+    padding: 16px;
+    text-align: center;
+    border-top: 2px black solid;  
 }

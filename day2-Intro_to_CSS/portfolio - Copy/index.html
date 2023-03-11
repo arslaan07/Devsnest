@@ -7,8 +7,13 @@
     <title>Arslaan's Portfolio</title>
 </head>
 <body>
-    <div class="container">
-        <div id="intro">
+    <header>
+        <nav>
+            <a href="#about-me">About Me</a><a href="#qualifications">Qualifications</a><a href="#hobbies">Hobbies</a><a href="#technologies">Technologies</a><a href="#contact-me">Contact Me</a>
+        </nav>
+    </header>
+    <main class="container">
+        <article id="intro">
             <img class="portfolio-pic" src="tom.PNG" alt=""> 
          <h1>Hi, I' Arslaan</h1>
          <p>I am <span id="dynamic-text" class="dynamic-text-color"></span></p>
@@ -21,8 +26,8 @@
          </a><a href="https://www.instagram.com/nxxn_x9/" target="_blank">
              <img src="instagram.png" alt="">
          </a> 
-        </div>
-        <div id="about-me">
+        </article>
+        <section id="about-me">
                 <h2>About Me</h2>
                 <div>
                     <h2>I'm of no use</h2>
@@ -37,22 +42,22 @@
                 This website is an attempt to share my knowledge and experience. I'm 
                 willing to share my knowledge with you. Are you willing to learn?
             </p>
-        </div>
-        <div id="qualifications">
+        </section>
+        <section id="qualifications">
             <h2>Qualifications</h2>
             <ol>
                 <li>Btech in IT(2020-24)</li>
             </ol>
-        </div>
-        <div id="hobbies">
+        </section>
+        <section id="hobbies">
             <h2>Hobbies</h2>
             <ul>
                 <li>Scrolling Shorts</li>
                 <li>Sleeping</li>
                 <li>Learning</li>
             </ul>
-        </div>
-        <div id="technologies">
+        </section>
+        <section id="technologies">
             <h2>Technologies</h2>
             <table>
                 <tr>
@@ -76,27 +81,35 @@
                     <td>Postgres</td>
                 </tr>
             </table>  
-        </div>
-        <div id="contact-me">
+        </section>
+        <section id="contact-me">
             <h2>Contact Me</h2>
             <form name="contact" method="post" data-netlify="true">
-                <p>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required autocomplete="off">
-                </p>
-                <p>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" autocomplete="off">
-                </p>
-                <p>
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" > </textarea>
-                </p>
+                <section>
+                    <p>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required autocomplete="off">
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" autocomplete="off">
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" > </textarea>
+                    </p>
+                </section>
                 <button id="send">Send</button>
             </form>
-
-        </div>
-    </div>
+        </section>
+    </main>
+    <footer>
+        made with 💟 by arslaan
+    </footer>
     <script src="main.js" ></script>
 </body>
 </html>

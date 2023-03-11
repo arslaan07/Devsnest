@@ -30,11 +30,22 @@
         width: 100%;
         background-color: royalblue;
       }
+      p::after{
+    content: "🔸" ;
+    }   
+    p::before{
+        content: "🧸 ";
+    }
+    input::placeholder{
+        color: blueviolet;
+        padding:16px;
+    }
     </style>
 </head>
 <body>
     <p style="color: royalblue" id="id-level" class="class-level">this is a para for testing specifity</p>
 </body>
+<input type="text" placeholder="this is placeholder">
 <div class="box">
     <div class="box child">
 
