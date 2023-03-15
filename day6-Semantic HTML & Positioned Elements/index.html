@@ -6,7 +6,8 @@
     <title>CSS Specifity and Semantic HTML</title>
     <style>
       p#id-level {
-        color: aquamarine
+        color: aquamarine;
+        position: relative;
       }  
 
       /* id specifity=100
@@ -23,12 +24,20 @@
         width: 400px;
         height: 400px;
         padding: 16px;
-        background-color: coral;
-      }
-      .child {
-        box-sizing: border-box ;
-        width: 100%;
         background-color: royalblue;
+        position: relative;
+      }
+      .another-box {
+        height: 50%;
+        padding: 16px;
+        box-sizing: border-box;
+        width: 50%;
+        background: coral;
+        z-index: 1;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        
       }
       p::after{
     content: "🔸" ;
@@ -38,18 +47,32 @@
     }
     input::placeholder{
         color: blueviolet;
-        padding:16px;
+        padding:16px; 
+    }
+    input, button{
+        border: 4px solid royalblue;
+    }
+    /* strong {
+        color: black;
+        position: relative;
+        margin-top: 10px;;
+    } */
+    strong {
+        position: absolute;
+        top: 20px;
+        left: 50px;
     }
     </style>
 </head>
 <body>
-    <p style="color: royalblue" id="id-level" class="class-level">this is a para for testing specifity</p>
+    <p id="id-level" class="class-level">this is a <strong>para</strong> for testing specifity</p>
 </body>
 <input type="text" placeholder="this is placeholder">
+<input type="text" placeholder="this is placeholder">
+<button>some button</button>
 <div class="box">
-    <div class="box child">
-
-    </div>
+<div class="another-box"></div>
+</div>
     <span>this is a a span </span>
 </div>
 </html>

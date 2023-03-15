@@ -27,7 +27,14 @@ body{
     height:auto;
 }
 header{
-    padding: 16px;;
+    background: rgba(14, 2, 2, 0.038);
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    background-color: hsl(0, 16%, 82%);
+    border: 1px white solid;
+    border-bottom:  black solid 2px;
+   
 }
 header nav > a{
     margin: 16px;
