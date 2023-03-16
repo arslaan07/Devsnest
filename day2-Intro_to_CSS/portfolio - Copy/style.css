@@ -31,14 +31,17 @@ header{
     padding: 16px;
     position: sticky;
     top: 0;
-    background-color: hsl(0, 16%, 82%);
+    background-color: white;
     border: 1px white solid;
     border-bottom:  black solid 2px;
    
 }
 header nav > a{
-    margin: 16px;
+    margin-right: 16px;
     text-decoration: none;
+}
+header nav > a:last-child {
+    margin-right: revert;
 }
 header nav > a:hover{
     text-decoration: underline;
@@ -95,3 +98,50 @@ footer {
     text-align: center;
     border-top: 2px black solid;  
 }
+
+.mobile-nav,
+.menu {
+    display: none;
+}
+
+@media (width<500px) {
+    .default-nav {
+        display: none;
+    }
+    .mobile-nav,
+    .menu {
+        display: revert;
+    }
+    #menu-button {
+        border: 2px black solid;
+        border-radius: 20px;
+        display:block;
+        margin-left:auto;
+        padding: 10px;
+    }
+    
+    section.menu {
+        
+        height: 0;
+        overflow: hidden;
+        background: hsl(0, 0, 100%);
+        position: fixed;
+        top: 0;;
+        z-index: 1;
+        width: 100%;
+    }
+    #close-menu {
+        background: transparent;
+        border: none;
+        font-size: x-large;
+        position: absolute;
+        top:16px;
+        right:16px;
+    }
+}
+    @media (width<=400px) {
+        .portfolio-pic {
+            width: 100%;
+        }
+    }
+
