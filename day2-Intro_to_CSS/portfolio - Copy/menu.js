@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const menu = document.querySelector(".menu");
         menu.style.height="0";
         console.log("closeMenu");
-
     }
+    
     function addClickToMenuItems() {
        let menuItems = document.querySelectorAll("section.menu ul > li");
        for(let menuItem of menuItems) {
