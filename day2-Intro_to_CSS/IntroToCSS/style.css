@@ -1,8 +1,11 @@
 
 /* 1. element selector */
+html {
+    font-size: 8px;
+}
 h1{
     color: rgb(223, 0, 37);
-    font-size: 30px; 
+    font-size: 3px; 
 } 
 /* 2. id selector */
 #first-heading{
@@ -19,7 +22,6 @@ h1{
 .box{
   
     background-color: purple;
-    border: 16px solid;
     padding: 23px;
     border: 2px solid;
     padding: 24px 48px;
@@ -30,7 +32,7 @@ h1{
     border-bottom-left-radius: 25px;
 }
 p{
-    font-size: 2em;
+    font-size: 2em;  /*relative to root element*/
 }
 
 #red-color{

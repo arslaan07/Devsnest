@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(e.key==2){
             e.preventDefault();
         }
+        //when 2 is pressed no event will happen and 2 will not be logged in input username
         console.log(e.key);
     } )
     
@@ -39,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     document.querySelector(".parent").addEventListener("click", function() {
         console.log("parent clicked");
+        console.log("Event bubbling complete");
+
     })
     
     document.querySelector(".child").addEventListener("click", function() {
@@ -47,16 +50,27 @@ document.addEventListener("DOMContentLoaded", function() {
     
     document.getElementById("subchild").addEventListener("click", function(event) {
         console.log("subchild clicked");
-        event.stopPropagation();
+        console.log("Event capture complete");
+        console.log("Event bubbling started");
+        console.log("subchild clicked");
+
+        // event.stopPropagation();
     
-        // stopPropagation method prevents event bubbling to occur
+    //     // stopPropagation method prevents event bubbling to occur
     })
      
-    // Event capture
+//     // Event capture
     document.querySelector(".parent").addEventListener("click", function() {
+        console.log("Event capture occuring")
         console.log("parent clicked");
     },true);
-})
+    document.querySelector(".child").addEventListener("click", function() {
+        console.log("child clicked");
+    },true);
+ });
+ //when subchild is clicked, first event capture occurs and the event bubbling
+
+
 // Event capture and event bubbling are two different mechanisms for handling events in JavaScript.
 
 // Event capture is the process of capturing an event at the top level of the DOM (Document Object Model) and then propagating it down to the target element.
@@ -68,4 +82,4 @@ document.addEventListener("DOMContentLoaded", function() {
 // This mechanism is also known as the "bubbling phase" of event propagation.
 
 // By default, events in JavaScript use the event bubbling mechanism.
-//  However, you can also use event capture by setting the "useCapture" parameter to "true" when adding an event listener.
+//  However, you can also use event capture by setting the "useCapture" parameter to "true" when adding an event listener

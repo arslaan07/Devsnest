@@ -16,5 +16,6 @@
     /* 50% wrt child box */
 }
 input:invalid{
+ /* whenever an input is invalid, do: */
     outline: 2px coral solid;
 }
