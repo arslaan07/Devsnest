@@ -125,11 +125,13 @@ footer {
         
         height: 0;
         overflow: hidden;
-        background: white
+        background: white;
         position: fixed;
         top: 0;
         z-index: 1;
         width: 100%;
+        transition: height 0.5s;
+
     }
     section.menu ul {
         list-style: none;
@@ -151,10 +153,7 @@ footer {
     }
     section.menu nav ul li > a{
         text-decoration: none;
-    }
-    
-    
-    
+    }  
 }
     @media (width<=400px) {
         .portfolio-pic {
