@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<style>
+    body {
+    padding: 16px;
+}
+.box {
+    background-color: royalblue;
+    width: 300px;
+    height: 300px;
+    
+}
+.second {
+    flex-shrink: 8;
+    /* not working, try again */
+}
+.container {
+    height: 100vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 16px;
+    justify-content: center;
+    /* to align items horizontally */
+    align-items: center;
+    /* to align items vertically, worked only after adding height property */
+}
+</style>
+<body>
+    <main class="container">
+        <section class="box"></section>
+        <section class="box second"></section>
+        <section class="box"></section>
+        <!-- <section class="box"></section>
+        <section class="box"></section>
+        <section class="box"></section>
+        <section class="box"></section> -->
+
+    </main>
+</body>
+</html>

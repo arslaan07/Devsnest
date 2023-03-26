@@ -1,0 +1,29 @@
+/* custom propertoes */
+
+:root {
+    --background-color:white;
+    /* --background-color is variable name */
+
+    --text-color: hsl(0, 0%, 0%);
+    --padding-large: 32px;
+    --padding-medium: 8px;
+    --border-style: 2px solid;
+}
+h1{
+    padding-left: var(--padding-large);
+    border: var(--border-style);
+    border-color: black;
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--text-color);
+        color: var(--background-color);
+    }
+    h1 {
+        border-color: white;
+    }
+}
