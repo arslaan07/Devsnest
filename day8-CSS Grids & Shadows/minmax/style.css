@@ -1,0 +1,13 @@
+.container {
+    display: grid;
+    /* allows to lay down items in rows and columns */
+    grid-template-columns: repeat(3,200px);
+   /* minmax() specifies the range for min width and max width for a column */
+    grid-template-rows: 200px 300px;
+    gap: 16px;
+    /* width: 1280px; */
+    border: 1px solid;
+}
+.container > div {
+    background-color: lightcoral;
+}

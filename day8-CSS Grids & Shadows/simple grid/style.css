@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    /* allows to lay down items in rows and columns */
+    grid-template-columns: 200px 20rem 30%;
+    /* creating 3 column... 1st column-->200px space ... 2nd column-->20rem space ...3rd column-->30% space */
+    grid-template-rows: 300px 20rem;
+    gap: 16px;
+}
+.item {
+    background-color: lightgreen;
+}

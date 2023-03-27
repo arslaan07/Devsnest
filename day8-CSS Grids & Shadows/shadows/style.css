@@ -1,0 +1,17 @@
+.card {
+    width: 300px;
+    height: 500px;
+    border: 1px solid;
+    box-shadow: 5px 5px 20px 12px hsl(240, 44%, 62%),
+               -5px -5px 20px 12px hsl(352, 74%, 53%);
+    /* 1st-->horizontal shadow(horizontal offest), 2nd-->vertical shadow, 3rd-->border blur, 4th-->spread radius, 5th-->color */
+}
+.card h1 {
+    text-shadow: 2px 2px 1px hsl(352, 74%, 53%);
+    /* spread-radius prop is not available here */
+    color: white;
+}
+.cards {
+    display: flex;
+    place-content: center;
+}
