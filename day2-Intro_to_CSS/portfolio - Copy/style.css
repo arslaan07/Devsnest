@@ -48,11 +48,11 @@ body{
 .header{
     background: rgba(14, 2, 2, 0.038);
     padding: 16px;
-    position: sticky;
+    position: static;
     top: 0;
     background-color: var(--background-color);
     z-index: 1;
-   
+    border: 1px solid;
 }
 header nav > a{
     margin-right: 16px;
